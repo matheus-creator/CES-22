@@ -9,3 +9,4 @@ def sum_to(n):
   
     return sum
 
+print(sum_to(10))
