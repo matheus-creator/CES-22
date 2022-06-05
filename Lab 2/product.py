@@ -1,6 +1,9 @@
 from taxCalculator import TaxCalculator
 
 class Product:
+    '''
+    Class that represents a generic product sold in the library
+    '''
     def __init__(self):
         self.taxCalculator = TaxCalculator()
         self.identifications = []

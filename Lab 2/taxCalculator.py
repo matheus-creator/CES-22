@@ -1,4 +1,7 @@
 class TaxCalculator:
+    '''
+    Class to calculate taxes of products
+    '''
     def getTaxRate(self, genre, purchase_price, selling_price):
         new_genre = genre.lower()
         tax = 0.5

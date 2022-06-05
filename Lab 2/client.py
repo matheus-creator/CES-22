@@ -1,6 +1,9 @@
 from purchase import Purchase
 
 class Client:
+    '''
+    Class that represents a client of the library.
+    '''
     def __init__(self):
         self.clients = []
         self.emails = []

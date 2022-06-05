@@ -4,6 +4,9 @@ from contact import Contact
 from client import Client
 
 class Library:
+    '''
+    Class that represents a library.
+    '''
     def __init__(self):
         self.contacts = Contact()
         self.admins = Admin()

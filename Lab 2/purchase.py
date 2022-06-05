@@ -1,4 +1,7 @@
 class Purchase:
+    '''
+    Class that represents a purchase
+    '''
     def __init__(self):
         self.products = []
         self.quantity = []

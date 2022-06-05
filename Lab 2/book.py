@@ -2,6 +2,9 @@ from author import Author
 from product import Product
 
 class Book(Product):
+    '''
+    Class that represents a book, which is a type of product sold in a library
+    '''
     def __init__(self):
         super().__init__()
         self.titles = []

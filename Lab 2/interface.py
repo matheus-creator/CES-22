@@ -1,4 +1,7 @@
 class Interface:
+    '''
+    Class that cares about the terminal interface of the library.
+    '''
     def __init__(self, library):
         self.type = ''
         self.client = True
