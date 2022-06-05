@@ -10,7 +10,7 @@ class Product:
     def add_item(self, identification, purchase_price, selling_price):
         self.identifications.append(identification)
         self.purchase_prices.append(purchase_price)
-        self.selling_prices.append(selling_price)
+        new_selling_price = self.taxCalculator.getTaxRate('', purchase_price, selling_price)
     
     def update_item(self, identification, property, property_value):
         if identification in self.identifications:

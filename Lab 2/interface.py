@@ -185,15 +185,3 @@ class Interface:
         print()
         name = input('Digite o nome do cliente: ')
         self.library.remove_library_client(name)
-
-    def show_admin_add_purchase(self):
-        print()
-    
-    def show_admin_update_purchase(self):
-        print()
-
-    def show_admin_find_purchase(self):
-        print()
-
-    def show_admin_remove_purchase(self):
-        print()
