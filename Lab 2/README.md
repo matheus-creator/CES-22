@@ -10,7 +10,7 @@ Por último, tem-se uma interface simplificada para os contatos da livraria.
 
 ## Diagrama de classes
 
-![Class-diagram](/image/diagram.png "s")
+![diagram](https://user-images.githubusercontent.com/64436878/172075951-70eee38d-b52d-46f7-a3b9-cf167ce9c5dd.svg)
 
 ## Como rodar o código
 
