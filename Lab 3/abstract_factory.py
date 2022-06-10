@@ -1,64 +1,72 @@
 class CakeFactory:
-    def __init__():
-        pass
+    def createWeddingCake():
+        return WeddingCake()
+
+    def createBirthDayCake():
+        return BirthdayCake()
     
+    def createInformalCake():
+        return InformalCake()
+    
+class ChocolateCakeFactory(CakeFactory):
+    def __init__(self):
+        super().__init__()
 
-class ChocolateCakeFactory:
-    def __init__():
-        pass
+class PineappleCakeFactory(CakeFactory):
+    def __init__(self):
+        super().__init__()
 
-class PineappleCakeFactory:
-    def __init__():
-        pass
+class CornCakeFactory(CakeFactory):
+    def __init__(self):
+        super().__init__()
 
-class CornCakeFactory:
-    def __init__():
-        pass
+class WeddingCake:
+    def writeCongrats(self):
+        print('Congrats!')
 
-class Wedding:
-    def __init__():
-        pass
+class BirthdayCake:
+    def gift(self):
+        print('Take my gift.')
 
-class Birthday:
-    def __init__():
-        pass
+class InformalCake:
+    def enjoy(self):
+        print("Let's enjoy!")
 
-class Informal:
-    def __init__():
-        pass
+class ChocolateWeddingCake(WeddingCake):
+    def __init__(self):
+        super().__init__()
 
-class ChocolateWedding:
-    def __init__():
-        pass
+class ChocolateBirthdayCake(BirthdayCake):
+    def __init__(self):
+        super().__init__()
 
-class ChocolateBirthday:
-    def __init__():
-        pass
+class ChocolateInformalCake(InformalCake):
+    def __init__(self):
+        super().__init__()
 
-class ChocolateInformal:
-    def __init__():
-        pass
+class PineappleWeddingCake(WeddingCake):
+    def __init__(self):
+        super().__init__()
 
-class PineappleWedding:
-    def __init__():
-        pass
+class PineappleBirthdayCake(BirthdayCake):
+    def __init__(self):
+        super().__init__()
 
-class PineappleBirthday:
-    def __init__():
-        pass
+class PineappleInformalCake(InformalCake):
+    def __init__(self):
+        super().__init__()
 
-class PineappleInformal:
-    def __init__():
-        pass
+class CornWeddingCake(WeddingCake):
+    def __init__(self):
+        super().__init__()
 
-class CornWedding:
-    def __init__():
-        pass
+class CornBirthdayCake(BirthdayCake):
+    def __init__(self):
+        super().__init__()
 
-class CornBirthday:
-    def __init__():
-        pass
+class CornInformalCake(InformalCake):
+    def __init__(self):
+        super().__init__()
 
-class CornInformal:
-    def __init__():
-        pass
+cake = ChocolateCakeFactory.createWeddingCake()
+cake.writeCongrats()
