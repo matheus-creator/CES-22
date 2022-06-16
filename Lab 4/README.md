@@ -8,7 +8,7 @@ py vehicles.py
 
 A figura a seguir ilustra o funcionamento do código:
 
-![alt vehicle](/images/vehicle.png)
+![vehicle](https://user-images.githubusercontent.com/64436878/174137048-cd404876-4b3b-45ac-a38b-741bf21a78fc.png)
 
 ## Pizza
 
@@ -19,4 +19,4 @@ py pizza.py
 ```
 A figura a seguir ilustra o funcionamento do código:
 
-![alt vehicle](/images/pizza.png)
+![pizza](https://user-images.githubusercontent.com/64436878/174137013-49b37416-8319-4567-b0fa-ae1ad7bcc9c0.png)
