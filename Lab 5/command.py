@@ -2,50 +2,92 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo
 
-SALDO = 150
+# current balance
+BALANCE = 150
 
 class Interface:
+    '''
+    Class that represents a receiver.
+    '''
     def checkBalance(self):
-        global SALDO
-        return 'Seu saldo é R$' + str(SALDO)
+        '''
+        Check current balance.
+        '''
+        global BALANCE
+        return 'Seu saldo é R$' + str(BALANCE)
 
 
     def checkStatement(self, transfered_values):
+        '''
+        Check statement.
+        '''
         response = ''
         for i in range(len(transfered_values)):
             response += str(i+1) + 'ª transferência: R$' + str(transfered_values[i]) + '\n'
 
         return response
 
+
     def makeTransfer(self, transfer):
-        global SALDO
-        SALDO -= transfer
+        '''
+        Make a transfer.
+        '''
+        global BALANCE
+        BALANCE -= transfer
+
 
 class Button:
+    '''
+    Class that represents a button invoker.
+    '''
     def setCommand(self, command):
+        '''
+        Set button command.
+        '''
         self.command = command
     
 
     def executeCommand(self, args):
+        '''
+        Execute button command.
+        '''
         self.command.execute(args)
 
 
 class Command:
+    '''
+    Class that represents a command.
+    '''
     def __init__(self, interface):
         self.interface = interface
+    
+    def execute(self):
+        '''
+        Execute command.
+        '''
+        pass
 
 
 class CommandHistory:
+    '''
+    Class that represents a command history.
+    '''
     def __init__(self):
         self.history = []
         self.string_history = []
     
 
     def getStringHistory(self):
+        '''
+        Get history in string format for printing.
+        '''
         return self.string_history
 
 
     def push(self, command, value):
+        '''
+        Push data to command history.
+        '''
         self.history.append(command)
         if command.name == 'transfer':
             self.string_history.append('Transferência R$' + str(value))
@@ -56,6 +98,9 @@ class CommandHistory:
 
 
 class CheckBalanceCommand(Command):
+    '''
+    Class that represents a check balance command.
+    '''
     def __init__(self, interface):
         super().__init__(interface)
         self.name = 'balance'
@@ -65,6 +110,9 @@ class CheckBalanceCommand(Command):
         showinfo('Saldo', response)
 
 class CheckStatementCommand(Command):
+    '''
+    Class that represents a check statement command.
+    '''
     def __init__(self, interface):
         super().__init__(interface)
         self.name = 'statement'
@@ -75,6 +123,9 @@ class CheckStatementCommand(Command):
 
 
 class MakeTransferCommand(Command):
+    '''
+    Class that represents a make transfer command.
+    '''
     def __init__(self, interface):
         super().__init__(interface)
         self.name = 'transfer'
@@ -85,6 +136,9 @@ class MakeTransferCommand(Command):
 
 
 class Application(ttk.Frame):
+    '''
+    Class that represents the application.
+    '''
     def __init__(self, container):
         super().__init__(container)
         self.executed_commands = CommandHistory()
@@ -107,6 +161,9 @@ class Application(ttk.Frame):
 
     
     def createUI(self):
+        '''
+        Create UI using Tkinter.
+        '''
         initial_text_1 = 'Bem-vindo ao nosso serviço online!'
         initial_text_2 = 'Escolha alguma opção abaixo para continuar.'
 
@@ -133,6 +190,9 @@ class Application(ttk.Frame):
 
 
     def executeCommand(self, button):
+        '''
+        Execute a command given a certain button.
+        '''
         if button == 1:
             self.button_1.executeCommand(None)
             self.executed_commands.push(self.balance, 0)
